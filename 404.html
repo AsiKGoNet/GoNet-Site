@@ -4,22 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>העמוד לא נמצא | GoNet</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;800&display=swap" />
-  <link rel="stylesheet" href="/assets/style.css" />
+  <style>
+    body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: #f4f7fb; color: #14213d; display: grid; place-items: center; min-height: 100vh; text-align: center; padding: 16px; box-sizing: border-box; }
+    h1 { font-size: 30px; margin: 0 0 10px; }
+    p { color: #4a5568; }
+    a { color: #1565c0; }
+    @media (prefers-color-scheme: dark) { body { background: #0f1724; color: #e8edf5; } p { color: #c3cbd8; } a { color: #5aa2ff; } }
+  </style>
 </head>
-<body dir="rtl">
-  <header class="site-header">
-    <div class="wrap">
-      <a class="logo" href="/"><img src="/assets/logo.png" alt="GoNet" width="300" height="88" /></a>
-    </div>
-  </header>
-  <main class="page">
-    <div class="wrap">
-      <article>
-        <h1>העמוד לא נמצא</h1>
-        <p>אולי הקישור השתנה. <a href="/">לדף הבית</a> · <a href="/en/">English</a></p>
-      </article>
-    </div>
+<body>
+  <main>
+    <h1>העמוד לא נמצא</h1>
+    <p>אולי הקישור השתנה.</p>
+    <p><a id="home" href="/">לדף הבית</a> · <a id="home-en" href="/en/">English</a></p>
   </main>
+  <script>
+    // on asikgonet.github.io the site lives under /GoNet-Site/, on go-net.co.il at the root
+    var base = location.hostname.indexOf("github.io") >= 0 ? "/" + location.pathname.split("/")[1] + "/" : "/";
+    document.getElementById("home").href = base;
+    document.getElementById("home-en").href = base + "en/";
+  </script>
 </body>
 </html>
