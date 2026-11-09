@@ -1,0 +1,9 @@
+{
+  "name": "gonet-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GoNet company website (static HTML, hosted on GitHub Pages at go-net.co.il)",
+  "scripts": {
+    "start": "node dev/serve.js"
+  }
+}
